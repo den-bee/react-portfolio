@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Root from 'components/Root/Root';
 import NavBar from 'components/NavBar/NavBar';
 import Header from "../Header/Header";
 import Content from "../Content/Content";
@@ -10,17 +11,7 @@ import Work from "../Work/Work";
 import Contact from "../Contact/Contact"
 import { Outlet,createBrowserRouter, RouterProvider, Route, NavLink } from 'react-router-dom';
 
-const Root = () => {
-  return (
-    <div>
-      <Header/>
-      <NavBar/>
-      <Content/>
-      <Footer/>
-    </div>
-  )
-  
-}
+
 
 function App() {
   const router = createBrowserRouter([
