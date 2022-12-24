@@ -16,7 +16,7 @@ const Work = () => {
     return (
         <div className={styles.workContainer}>
             <Accordion defaultActiveKey="0" flush>
-                <Accordion.Item eventKey="0">
+                <Accordion.Item className={styles.accordion}  eventKey="0">
                     <Accordion.Header as="h3">ColorSelect</Accordion.Header>
                     <Accordion.Body>
                         <ColorSelect/>
@@ -25,7 +25,7 @@ const Work = () => {
             </Accordion>
 
             <Accordion>
-                <Accordion.Item eventKey="1">
+                <Accordion.Item className={styles.accordion}  eventKey="1">
                     <Accordion.Header as="h3">ShoppingList</Accordion.Header>
                     <Accordion.Body>
                         <ShoppingListApp/>
@@ -34,7 +34,7 @@ const Work = () => {
             </Accordion>
 
             <Accordion>
-                <Accordion.Item eventKey="2">
+                <Accordion.Item className={styles.accordion}  eventKey="2">
                     <Accordion.Header as="h3">SlotMachine</Accordion.Header>
                     <Accordion.Body>
                         <SlotMachineApp/>
@@ -43,7 +43,7 @@ const Work = () => {
             </Accordion>
 
             <Accordion>
-                <Accordion.Item eventKey="3">
+                <Accordion.Item className={styles.accordion}  eventKey="3">
                     <Accordion.Header as="h3">Interval</Accordion.Header>
                     <Accordion.Body>
                         <Interval/>
@@ -52,7 +52,7 @@ const Work = () => {
             </Accordion>
 
             <Accordion>
-                <Accordion.Item eventKey="4">
+                <Accordion.Item className={styles.accordion}  eventKey="4">
                     <Accordion.Header as="h3">Filtering</Accordion.Header>
                     <Accordion.Body>
                         <Filtering/>
@@ -61,7 +61,7 @@ const Work = () => {
             </Accordion>
 
             <Accordion>
-                <Accordion.Item eventKey="5">
+                <Accordion.Item className={styles.accordion}  eventKey="5">
                     <Accordion.Header as="h3">JokesApp</Accordion.Header>
                     <Accordion.Body>
                         <JokesApp/>
@@ -70,7 +70,7 @@ const Work = () => {
             </Accordion>
 
             <Accordion>
-                <Accordion.Item eventKey="7">
+                <Accordion.Item className={styles.accordion}  eventKey="7">
                     <Accordion.Header as="h3">PokedexApp</Accordion.Header>
                     <Accordion.Body>
                         <PokedexApp/>
@@ -79,7 +79,7 @@ const Work = () => {
             </Accordion>
 
             <Accordion>
-                <Accordion.Item eventKey="7">
+                <Accordion.Item className={styles.accordion}  eventKey="7">
                     <Accordion.Header as="h3">Pokedex</Accordion.Header>
                     <Accordion.Body>
                         <Pokedex/>
