@@ -1,0 +1,32 @@
+nav {
+    display: grid;
+    grid-template-rows: 80px;
+    grid-template-columns: 5fr;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    background-color: grey;
+}
+
+.brandLink {
+    text-decoration: none;
+    color: black;
+    align-self: center;
+    padding-left: 10px;
+}
+
+
+.navLink {
+    text-decoration: none;
+    color: black;
+    align-self: center;
+    padding-right: 10px;
+}
+
+.navLink:hover {
+    color: white;
+}
+
+.brandLink:hover {
+    text-decoration: none;
+    color: black;
+}

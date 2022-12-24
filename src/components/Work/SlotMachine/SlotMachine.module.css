@@ -1,0 +1,23 @@
+.slotMachineContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slot {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.lever {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.loss {
+    color: red;
+    font-size: 22pt;
+}
