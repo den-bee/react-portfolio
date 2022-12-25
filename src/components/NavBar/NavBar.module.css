@@ -1,9 +1,10 @@
 nav {
     display: grid;
     grid-template-rows: 80px;
-    grid-template-columns: 5fr;
+    grid-template-columns: 1fr;
     grid-auto-flow: column;
     column-gap: 10px;
+    width: 100%;
     background-color: #8CBDB9;
 }
 
@@ -11,8 +12,9 @@ nav {
     text-decoration: none;
     color: black;
     align-self: center;
-    width: 30%;
+    width: 20%;
     padding-left: 20px;
+    font-size: 20px;
 }
 
 
@@ -21,6 +23,7 @@ nav {
     color: black;
     align-self: center;
     padding-right: 20px;
+    font-size: 18px;
 }
 
 .navLink:hover {
