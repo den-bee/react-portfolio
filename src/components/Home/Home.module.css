@@ -1,10 +1,18 @@
-.homePage {
+.homePageContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     text-align: center;
+    min-height: 700px;
+}
+
+.introTextContainer {
     font-size: 20px;
-    min-height: 100vh;
+}
+
+.imagesContainer {
+    padding: 50px;
+    margin: 50px;
 }
 

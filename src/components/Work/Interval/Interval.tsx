@@ -70,7 +70,6 @@ function Interval() {
       <Timer interval={1000}/>
       <RandomValue min={0} max={100}/>
       <RandomValue min={100} max={200}/>
-      <CurrentTime interval={1000}/>
     </div>
   );
 }

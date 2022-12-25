@@ -1,3 +1,8 @@
 .accordion {
     background-color: #E8ECEB;
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
 }
