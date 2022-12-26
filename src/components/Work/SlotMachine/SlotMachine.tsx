@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import {useState} from "react";
+import Accordion from 'react-bootstrap/Accordion';
 import styles from "./SlotMachine.module.css";
 
 let slotImages = [
@@ -68,9 +69,15 @@ const SlotMachine = ({slots : amountOfSlots} : SlotMachineProps) => {
 const SlotMachineApp = () => {
     
     return (
-        <div className={styles.slotMachineContainer}>
-            <SlotMachine slots={3}/>
-        </div>
+        <Accordion>
+            <Accordion.Item className={styles.accordion}  eventKey="2">
+                <Accordion.Header as="h3">SlotMachine</Accordion.Header>
+                <Accordion.Body>
+                    <p>Just a small slot machine game for you. In case you don't want to go out and walk to the casino.</p>
+                    <SlotMachine slots={3}/>
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
         
     )
 }

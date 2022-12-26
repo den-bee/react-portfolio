@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import {useEffect} from "react";
 import {useState} from "react";
+import Accordion from 'react-bootstrap/Accordion';
 import styles from "./FavoriteJoke.module.css";
 
 interface Joke {
@@ -57,9 +58,15 @@ const Jokes = () => {
 
 const JokesApp = () => {
     return (
-        <div>
+    <Accordion defaultActiveKey="0" flush>
+      <Accordion.Item eventKey="5" className={styles.accordion}>
+        <Accordion.Header as="h3">JokesApp</Accordion.Header>
+          <Accordion.Body>
+            <p>You're in a bar with your colleagues and you want to make an impression. I got the app for you! Use this Joke App to get a random joke, tell it to your colleagues and become the most populair guy in town!</p>
             <Jokes/>
-        </div>
+          </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
     )
 }
 

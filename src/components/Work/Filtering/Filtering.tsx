@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
+import Accordion from 'react-bootstrap/Accordion';
 import styles from "./Filtering.module.css";
 
 
@@ -63,4 +64,18 @@ const Filtering = () => {
   )
 }
 
-export default Filtering;
+const FilteringApp = () => {
+  return (
+    <Accordion>
+      <Accordion.Item className={styles.accordion}  eventKey="4">
+        <Accordion.Header as="h3">Filtering</Accordion.Header>
+          <Accordion.Body>
+            <p>This app shows you a list with names and other info. You can even filter a name in the list by typing it in the searchbar!</p>
+            <Filtering/>
+          </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+  )
+}
+
+export default FilteringApp;

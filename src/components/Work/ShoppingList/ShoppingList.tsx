@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from "react";
 import logo from './logo.svg';
+import Accordion from 'react-bootstrap/Accordion';
 import styles from "./ShoppingList.module.css";
 
 interface ShoppingListItem {
@@ -82,9 +83,15 @@ const ShoppingList = () => {
 
 const ShoppingListApp = () => {
     return (
-        <div className={styles.shoppingListContainer}>
-            <ShoppingList/>
-        </div>
+        <Accordion>
+            <Accordion.Item className={styles.accordion} eventKey="1">
+                <Accordion.Header as="h3">ShoppingList</Accordion.Header>
+                <Accordion.Body>
+                        <p>We all know it.. You go shopping, you get back home and you realize you forgot some stuff. Not anymore! With this handy shoppinglist I made.</p>
+                    <ShoppingList/>
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
     )
 }
 

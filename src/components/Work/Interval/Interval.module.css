@@ -4,3 +4,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.accordion {
+    background-color: #E8ECEB;
+    text-align: center;
+}

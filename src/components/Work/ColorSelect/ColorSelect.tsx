@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Accordion from 'react-bootstrap/Accordion';
 import logo from './logo.svg';
 import styles from "./ColorSelect.module.css";
 
@@ -35,6 +36,21 @@ const ColorSelect = () => {
     </div>
   );
 };
+
+const ColorSelectApp = () => {
+  return (
+    <Accordion defaultActiveKey="0" flush>
+      <Accordion.Item eventKey="0" className={styles.accordion}>
+        <Accordion.Header as="h3">ColorSelect</Accordion.Header>
+          <Accordion.Body>
+            <p>Ever wanted to make a color appear on screen? Well now you can! Just pick a color. Go ahead, try it out!</p>
+            <ColorSelect/>
+          </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+  )
   
-export default ColorSelect;
+}
+  
+export default ColorSelectApp;
   

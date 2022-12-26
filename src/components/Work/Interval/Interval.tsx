@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import styles from "./Interval.module.css";
+import Accordion from 'react-bootstrap/Accordion';
 import logo from './logo.svg';
 
 interface TimerProps {
@@ -74,4 +75,18 @@ function Interval() {
   );
 }
 
-export default Interval;
+const IntervalApp = () => {
+  return (
+    <Accordion>
+      <Accordion.Item className={styles.accordion}  eventKey="3">
+        <Accordion.Header as="h3">Interval</Accordion.Header>
+          <Accordion.Body>
+            <p>This amazing app gives you a random value between 0 - 100 AND between 100 - 200. And it even does this EVERY SECOND!</p>
+            <Interval/>
+          </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+  )
+}
+
+export default IntervalApp;
