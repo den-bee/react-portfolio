@@ -1,15 +1,7 @@
-.contactFormContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .contactForm {
     display: grid;
     grid-column: 1 / span 2;
     grid-template-columns: 100px 300px;
-    padding: 30px;
 }
 
 .contactForm label{

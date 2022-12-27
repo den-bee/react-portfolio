@@ -1,13 +1,8 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import {useState} from "react";
 import emailjs from '@emailjs/browser';
 import styles from "./ContactForm.module.css"
-
-export const ContactUs = () => {
-    
-}
-
 
 const ContactForm = () => {
     const [firstName, setFirstName] = useState("");
@@ -42,31 +37,31 @@ const ContactForm = () => {
 
     return (
         <div className={styles.contactFormContainer}>
-            <form className={styles.contactForm} onSubmit={handleSubmit}>
+            <form id="contactForm" className={styles.contactForm} onSubmit={handleSubmit}>
                 <label htmlFor="firstName">First Name: </label>
                 <input 
-                    id="firstName" 
+                    name="firstName" 
                     type="text" 
                     value={firstName} 
                     onChange={(event) => setFirstName(event.target.value)}
                 />
                 <label htmlFor="lastName">Last Name: </label>
                 <input 
-                    id="lastName" 
+                    name="lastName" 
                     type="text" 
                     value={lastName} 
                     onChange={(event) => setLastName(event.target.value)}
                 />
                 <label htmlFor="email">Email: </label>
                 <input 
-                    id="email" 
+                    name="email" 
                     type="email" 
                     value={email} 
                     onChange={(event) => setEmail(event.target.value)}
                 />
                 <label htmlFor="message">Message: </label>
                 <textarea 
-                    id="textArea" 
+                    name="message" 
                     value={message} 
                     onChange={(event) => setMessage(event.target.value)}>
                 </textarea>

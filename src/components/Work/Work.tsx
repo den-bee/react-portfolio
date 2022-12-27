@@ -9,6 +9,7 @@ import SlotMachineApp from './SlotMachine/SlotMachine';
 import JokesApp from './FavoriteJoke/FavoriteJoke';
 import PokedexApp from './PokedexApp/PokedexApp';
 import Pokedex from './Pokedex/Pokedex';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "./Work.module.css"
 
@@ -20,6 +21,7 @@ interface Component {
 const componentArray : Component[]= [
     {type: <ColorSelectApp/>, name: "Colorselect"},
     {type: <FilteringApp/>, name: "Filteringapp"},
+    {type: <IntervalApp/>, name: "Intervalapp"},
     {type: <ShoppingListApp/>, name: "Shoppinglistapp"},
     {type: <SlotMachineApp/>, name: "Slotmachineapp"},
     {type: <JokesApp/>, name: "Jokesapp"},
@@ -29,7 +31,6 @@ const componentArray : Component[]= [
 
 const Work = () => {
     const [searchText, setSearchText] = useState("");
-
     return (
         <div>
             <div className={styles.searchContainer}>

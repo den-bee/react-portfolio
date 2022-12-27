@@ -1,15 +1,16 @@
-import {useState} from "react";
+import { ThemeContext, themeSwitch} from "Context/ThemeContext";
+import {useState, useContext} from "react";
+
 import styles from "./ThemeButton.module.css"
 
+let lightImage = require("assets/NavBarImages/lights.png")
+
 const ThemeButton = () => {
-    const [theme, setTheme] = useState("dark");
-    const toggleTheme = () => {
-        setTheme((curr) => (curr === "light" ? "dark" : "light"));
-    }
+    const {theme, setTheme} = useContext(ThemeContext);
     
     return (
         <div>
-            <button onChange={toggleTheme} className={styles.switch}></button>
+            <a href="#"><img onClick={() => setTheme(theme === "light" ? "dark" : "light")} src={lightImage} width="30"/></a>
         </div>
     )
 }

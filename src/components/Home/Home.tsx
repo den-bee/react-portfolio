@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <div className={styles.homePageContainer}>
             <div className={styles.introTextContainer}>
-                <p>Hello! My Name is <b>Michiel Baert</b>.</p>
+                <p>Hello! My name is <b>Michiel Baert</b>.</p>
                 <p>Welcome to my portfolio made in <b>REACT</b>!<br></br>
                 Navigate to the <b>WORKSHOP</b> to take a look<br></br> at some components I made!</p>
             </div>

@@ -1,11 +1,10 @@
 nav {
     display: grid;
     grid-template-rows: 80px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 5fr;
     grid-auto-flow: column;
     column-gap: 10px;
-    width: 100%;
-    background-color: #8CBDB9;
+    background-color: #D5CEA3;
 }
 
 .brandLink {
@@ -35,12 +34,4 @@ nav {
     color: black;
 }
 
-.dark {
-    background-color: #333;
-    color: #fff;
-}
 
-.light {
-    background-color: #fff;
-    color: #333;
-}
