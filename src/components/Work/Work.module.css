@@ -3,6 +3,21 @@
     text-align: center;
 }
 
+.searchContainer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 60px;
+}
+
+.searchContainer label {
+    padding: 10px;
+}
+
+.search {
+    border-radius: 10px;
+}
+
 p {
     font-weight: bold;
 }

@@ -12,29 +12,38 @@ import Pokedex from './Pokedex/Pokedex';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "./Work.module.css"
 
-const componentArray = [
-    <ColorSelectApp/>,
-    <FilteringApp/>,
-    <IntervalApp/>,
-    <ShoppingListApp/>,
-    <SlotMachineApp/>,
-    <JokesApp/>,
-    <PokedexApp/>,
-    <Pokedex/>
-]
+interface Component {
+    type: JSX.Element,
+    name: string
+}
+
+const componentArray : Component[]= [
+    {type: <ColorSelectApp/>, name: "Colorselect"},
+    {type: <FilteringApp/>, name: "Filteringapp"},
+    {type: <ShoppingListApp/>, name: "Shoppinglistapp"},
+    {type: <SlotMachineApp/>, name: "Slotmachineapp"},
+    {type: <JokesApp/>, name: "Jokesapp"},
+    {type: <PokedexApp/>, name: "Pokedexapp"},
+    {type: <Pokedex/>, name: "Pokedex"}
+];
 
 const Work = () => {
+    const [searchText, setSearchText] = useState("");
+
     return (
         <div>
+            <div className={styles.searchContainer}>
+            <label>Search Component: </label>
+            <input className={styles.search} type="text" value={searchText} onChange={(event) => setSearchText(event.target.value)}/>
+            </div>
             <div className={styles.workContainer}>
-            {componentArray.map((component, index) => 
+            {componentArray.filter(c => c.name.toUpperCase().startsWith(searchText.toUpperCase())).map((component, index) => 
                 <div key={index} className={styles.accordion}>
-                    {component}
+                    {component.type}
                 </div>
             )}
+            </div>
         </div>
-        </div>
-        
     )
 }
 
