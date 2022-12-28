@@ -7,6 +7,7 @@ import IntervalApp from 'components/Work/Interval/Interval';
 import ShoppingListApp from './ShoppingList/ShoppingList';
 import SlotMachineApp from './SlotMachine/SlotMachine';
 import JokesApp from './FavoriteJoke/FavoriteJoke';
+import AnimalCrossingApp from './AnimalCrossingApp/AnimalCrossingApp';
 import PokedexApp from './PokedexApp/PokedexApp';
 import Pokedex from './Pokedex/Pokedex';
 
@@ -26,7 +27,8 @@ const componentArray : Component[]= [
     {type: <SlotMachineApp/>, name: "Slotmachineapp"},
     {type: <JokesApp/>, name: "Jokesapp"},
     {type: <PokedexApp/>, name: "Pokedexapp"},
-    {type: <Pokedex/>, name: "Pokedex"}
+    {type: <Pokedex/>, name: "Pokedex"},
+    {type: <AnimalCrossingApp/>, name: "Animalcrossingapp"}
 ];
 
 const Work = () => {

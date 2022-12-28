@@ -55,18 +55,18 @@ function PokedexApp() {
   const [activeLimit, setActiveLimit] = useState(10);
   return (
     <Accordion>
-    <Accordion.Item className={styles.accordion}  eventKey="7">
-        <Accordion.Header as="h3">PokedexApp</Accordion.Header>
-        <Accordion.Body>
-            <p>This is a sample of the Pokedex you can see in the next component. You can set a limit and it will show you that amount of pokemon in the list.</p>
-            <Pokedex limit={activeLimit}/>
-            <input type="number" onChange={(e) => setLimit(Number(e.target.value))} value={limit}/>
-            <button onClick={() => {
-              setActiveLimit(limit);
-            }}>Set Limit</button>
-        </Accordion.Body>
-    </Accordion.Item>
-</Accordion>
+      <Accordion.Item className={styles.accordion}  eventKey="7">
+          <Accordion.Header as="h3">PokedexApp</Accordion.Header>
+          <Accordion.Body>
+              <p>This is a sample of the Pokedex you can see in the next component. You can set a limit and it will show you that amount of pokemon in the list.</p>
+              <Pokedex limit={activeLimit}/>
+              <input type="number" onChange={(e) => setLimit(Number(e.target.value))} value={limit}/>
+              <button onClick={() => {
+                setActiveLimit(limit);
+              }}>Set Limit</button>
+          </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
   );
 }
 
