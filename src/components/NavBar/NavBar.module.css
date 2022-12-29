@@ -41,4 +41,18 @@ nav {
     color: black;
 }
 
+@media only screen and (max-width: 395px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+    }
+
+    .navLinkContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
 
