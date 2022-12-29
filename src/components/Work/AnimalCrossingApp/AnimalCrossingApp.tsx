@@ -1,56 +1,56 @@
 import React, { useEffect, useState } from 'react';
-import Card from 'react-bootstrap/Card';
-import LoadingIndicator from 'components/LoadingIndicator/LoadingIndicator';
 import Accordion from 'react-bootstrap/Accordion';
 import styles from "./AnimalCrossingApp.module.css";
+import { LanguageVariant } from 'typescript';
 
 interface AnimalProps {
-    name: string;
+    species: string;
 }
 
 interface Animal {
     id : number;
-    "file-name" : string;
+    name : {
+        "name-USen" : string
+    }
     "museum-phrase" : string;
     "icon_uri": string
 }
 
+let blathers = require("assets/AnimalCrossingAppImages/blathers.png");
 
-interface AnimalData {
-    results: Animal[]
-}
-
-
-const AnimalCrossingData = () => {
+const AnimalCrossingData = ({species} : AnimalProps) => {
     const [animals, setAnimals] = useState<Animal[]>([]);
-    const [loading, setLoading] = useState(false);
 
-    const loadData = async () => {
-        setLoading(true);
-        let result = await fetch(`https://acnhapi.com/v1a/fish/{}`, {
+    const loadData = async (name: string) => {
+        let result = await fetch(`https://acnhapi.com/v1a/${species}`, {
             method: "GET",
             headers: {
                 accept: "application/json"
             }
         });
-        let animalData : AnimalData = await result.json();
+        let animals : Animal[] = await result.json();
         
-        setAnimals(animalData.results);
-        setLoading(false);
+        setAnimals(animals);
     }
     useEffect(() => {   
-        loadData();
+        loadData(species);
     }, []);
+
+    let randomId = Math.floor(Math.random() * animals.length + 1);
 
     return (
         <div>
-            {loading && <LoadingIndicator/>}
-            {animals.map((animal : Animal) => 
-                <ul key={animal.id}>
-                    <li>{animal['file-name']}</li>
-                    <li>{animal['museum-phrase']}</li>
-                    <li>{animal['icon_uri']}</li>
-                </ul>
+            {animals.filter(animal => animal.id === randomId ).map((animal : Animal) => 
+            <div>
+                <div className={styles.animalCard}>
+                    <img src={animal["icon_uri"]}/>
+                    <h3>{animal.name["name-USen"]}</h3>
+                    <p>{animal["museum-phrase"]}</p>
+                </div>
+                <div>
+                    <button className={styles.loadButton} onClick={(event) => {loadData(species)}}>Load {species}</button>
+                </div>
+                </div>
             )}
         </div>
     )
@@ -61,8 +61,22 @@ const AnimalCrossingApp = () => {
         <Accordion>
             <Accordion.Item className={styles.accordion}  eventKey="7">
                 <Accordion.Header as="h3">AnimalCrossingApp</Accordion.Header>
-                <Accordion.Body>
-                    <AnimalCrossingData/>
+                <Accordion.Body >
+                    <div className={styles.introContainer}>
+                        <div>
+                            <img src={blathers} width="100"/>
+                        </div>
+                        <div className={styles.introText}>
+                            <p>Hello and welcome to my museum! My name is Blathers. Take a look around, press the buttons to get a random fish or bug displayed in the museum. You can even read a description written by yours truly! Enjoy and don't forget to leave a review!</p>
+                            <p>Oh and by the way... I'm not a big fan of bugs... just so you know... Yuck!</p>
+                        </div>
+                    </div>
+                    
+                    <div className={styles.animalContainer}>
+                        <AnimalCrossingData species="fish"/>
+                        <AnimalCrossingData species="bugs"/>
+                        
+                    </div>
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>

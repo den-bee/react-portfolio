@@ -1,0 +1,46 @@
+.introContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.introContainer img {
+    margin-right: 20px;
+}
+
+.introText {
+    align-self: center;
+    width: 700px;
+}
+
+.animalContainer {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.animalCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: 0.3s;
+    padding: 20px;
+    margin: 20px;
+    min-height: 400px;
+}
+
+.animalCard h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.loadButton {
+    border-radius: 10px; 
+    font-weight: bold;  
+    width: 100px;
+}
+
+.accordion {
+    background-color: #E8ECEB;
+    text-align: center;
+}
+    
