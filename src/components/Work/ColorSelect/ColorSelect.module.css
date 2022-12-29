@@ -5,6 +5,11 @@
     justify-content: center;
 }
 
+.colorSelectContainer button {
+    margin: 5px;
+    border-radius: 5px;
+}
+
 .accordion {
     background-color: #E8ECEB;
     text-align: center;

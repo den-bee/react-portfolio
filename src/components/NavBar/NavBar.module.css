@@ -1,28 +1,35 @@
 nav {
-    display: grid;
-    grid-template-rows: 80px;
-    grid-template-columns: 5fr;
-    grid-auto-flow: column;
-    column-gap: 10px;
+    display: flex;
+    justify-content: space-between;
     background-color: #D5CEA3;
+}
+
+.navLinkContainer {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
 }
 
 .brandLink {
     text-decoration: none;
-    color: black;
     align-self: center;
-    width: 20%;
-    padding-left: 20px;
+    color: black;
     font-size: 20px;
+    padding: 5px;
 }
 
+.themeButton {
+    align-self: center;
+    padding: 20px;
+    margin-right: 15px;
+}
 
 .navLink {
     text-decoration: none;
     color: black;
     align-self: center;
-    padding-right: 20px;
     font-size: 18px;
+    margin-right: 15px;
 }
 
 .navLink:hover {

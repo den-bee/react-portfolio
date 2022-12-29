@@ -61,7 +61,7 @@ function PokedexApp() {
               <p>This is a sample of the Pokedex you can see in the next component. You can set a limit and it will show you that amount of pokemon in the list.</p>
               <Pokedex limit={activeLimit}/>
               <input type="number" onChange={(e) => setLimit(Number(e.target.value))} value={limit}/>
-              <button onClick={() => {
+              <button className={styles.pokedexButton} onClick={() => {
                 setActiveLimit(limit);
               }}>Set Limit</button>
           </Accordion.Body>

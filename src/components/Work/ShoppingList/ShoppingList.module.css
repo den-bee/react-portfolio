@@ -1,6 +1,7 @@
 .shoppingAddForm {
     display: grid;
     grid-template-columns: 100px 1fr;
+    margin-bottom: 5px;
 }
 
 .shoppingListContainer {
@@ -8,6 +9,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.shoppingListContainer button {
+    border-radius: 5px;
 }
 
 .error {

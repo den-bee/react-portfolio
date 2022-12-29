@@ -41,7 +41,7 @@ const ShoppingList = () => {
 
 
     return (
-        <div>
+        <div className={styles.shoppingListContainer}>
             {errorMessage &&<div className={styles.error}>{errorMessage}</div>}
             {succesMessage &&<div className={styles.succes}>{succesMessage}</div>}
 

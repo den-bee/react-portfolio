@@ -5,6 +5,11 @@
     justify-content: center;
 }
 
+.pokedexButton {
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
 .accordion {
     background-color: #E8ECEB;
     text-align: center;

@@ -35,7 +35,7 @@ const Filtering = () => {
   return (
     <div className={styles.filteringContainer}>
       <div>
-        <label htmlFor="">Search: 
+        <label>Search:  
           <input type="text" value={searchText} onChange={(event) => setSearchText(event.target.value)}/>
         </label>
       </div>

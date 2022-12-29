@@ -24,7 +24,7 @@
     border-radius: 10px;
     transition: 0.3s;
     padding: 20px;
-    margin: 20px;
+    margin: 5px;
     min-height: 400px;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .loadButton {
-    border-radius: 10px; 
+    border-radius: 20px; 
     font-weight: bold;  
     width: 100px;
 }

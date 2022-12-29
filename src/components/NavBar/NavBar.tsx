@@ -9,13 +9,15 @@ const NavBar = () => {
     return (
         <div>
             <nav>
-                <NavLink className={styles.brandLink} to="/">Michiel Baert</NavLink>
-                <div className={styles.navLink}>
-                    <ThemeButton/>
-                </div>
-                <NavLink className={styles.navLink} to="/">Home</NavLink>
-                <NavLink className={styles.navLink} to="/Work">Workshop</NavLink>
-                <NavLink className={styles.navLink} to="/Contact">Contact</NavLink>
+                 <NavLink className={styles.brandLink} to="/">Michiel Baert</NavLink>
+                <div className={styles.navLinkContainer}>
+                    <div className={styles.themeButton}>
+                        <ThemeButton/>
+                    </div>
+                    <NavLink className={styles.navLink} to="/">Home</NavLink>
+                    <NavLink className={styles.navLink} to="/Work">Workshop</NavLink>
+                    <NavLink className={styles.navLink} to="/Contact">Contact</NavLink>
+                </div> 
             </nav>
         </div>
     )
