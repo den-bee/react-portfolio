@@ -43,4 +43,11 @@
     background-color: #E8ECEB;
     text-align: center;
 }
+
+@media only screen and (max-width: 395px) {
+    .animalContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
     
